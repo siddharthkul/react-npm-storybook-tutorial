@@ -1,13 +1,13 @@
-# react-custom-button
+# react-npm-storybook-tutorial
 
 > Made with create-react-library
 
-[![NPM](https://img.shields.io/npm/v/react-custom-button.svg)](https://www.npmjs.com/package/react-custom-button) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-npm-storybook-tutorial.svg)](https://www.npmjs.com/package/react-npm-storybook-tutorial) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save react-custom-button
+npm install --save react-npm-storybook-tutorial
 ```
 
 ## Usage
@@ -15,12 +15,18 @@ npm install --save react-custom-button
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-custom-button'
-import 'react-custom-button/dist/index.css'
+import { ReactCustomButton } from 'react-npm-storybook-tutorial'
+import 'react-npm-storybook-tutorial/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return (
+      <ReactCustomButton
+        variant='primary'
+        text='Primary'
+        onClick={() => alert('hello world')}
+      />
+    )
   }
 }
 ```
