@@ -2,7 +2,7 @@ import * as React from 'react'
 import styles from './styles.module.css'
 import Ripples from 'react-ripples'
 
-interface ReactCustomButtonProps {
+export interface ButtonProps {
   variant?: string
   text: string
   disabled?: boolean
@@ -10,14 +10,16 @@ interface ReactCustomButtonProps {
   onClick?: () => void
 }
 
-export const ReactCustomButton = React.memo(
+export const Button = React.memo(
   ({
     text,
     variant = 'default',
     disabled = false,
     disableElevation = false,
-    onClick = () => { }
-  }: ReactCustomButtonProps) => {
+    // eslint-disable-next-line prettier/prettier
+    onClick = () => { },
+    ...props
+  }: ButtonProps) => {
     let buttonStyles: string = styles.default
     switch (variant) {
       case 'primary':
@@ -43,6 +45,7 @@ export const ReactCustomButton = React.memo(
             className={buttonStyles}
             disabled={disabled}
             onClick={onClick}
+            {...props}
           >
             {text}
           </button>
