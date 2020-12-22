@@ -1,8 +1,9 @@
 # react-npm-storybook-tutorial
 
-> Do not use in production / this is a tutorial package for myself. Thank you :) 
+> Do not use in production / this is a tutorial package for myself. Thank you :)
 
 ## Goals for self
+
 - learn how to publish a custom component to npm (unscoped)
 - learn and explore storybook to document UI components
 - learn open source best practices
@@ -22,13 +23,13 @@ npm install --save react-npm-storybook-tutorial
 ```tsx
 import React, { Component } from 'react'
 
-import { ReactCustomButton } from 'react-npm-storybook-tutorial'
+import { Button } from 'react-npm-storybook-tutorial'
 import 'react-npm-storybook-tutorial/dist/index.css'
 
 class Example extends Component {
   render() {
     return (
-      <ReactCustomButton
+      <Button
         variant='primary'
         text='Primary'
         onClick={() => alert('hello world')}
